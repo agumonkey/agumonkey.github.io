@@ -1,0 +1,8 @@
+#+AUTHOR: agu monkey
+#+DATE: Sun Sep 13 16:26:19 CEST 2015
+#+LANGUAGE: en
+#+TITLE: GUM's github.io pages.
+* GUM
+
+** Introduction
+   emacs org-mode based blog entries
