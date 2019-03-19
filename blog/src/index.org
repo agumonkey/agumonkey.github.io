@@ -1,4 +1,4 @@
-#+TITLE: Sitemap
+#+TITLE: Index
 
 - [[file:second.org][GUM's 2nd blog entry on github.io pages.]]
 - [[file:first.org][first]]

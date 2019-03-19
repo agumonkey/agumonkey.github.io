@@ -10,7 +10,7 @@
 	 :headline-levels 4
 	 :auto-preamble t
 	 :auto-sitemap t
-	 :sitemap-filename "sitemap.org"
-	 :sitemap-title "Sitemap")
+	 :sitemap-filename "index.org"
+	 :sitemap-title "Index")
 	("main"
 	 :components ("blog"))))
