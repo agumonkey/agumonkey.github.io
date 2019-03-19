@@ -1,0 +1,22 @@
+# test blog entry
+
+## I think I need to write things down
+
+- electrical engineering
+- mechanical engineering
+- control systems
+- metalevel programming
+- logic programming / combinatorial programming
+
+- optional: interface programming system
+- optional: meta meta editors
+- evaluation towers optimization
+
+## diy
+
+- restoration
+- frame
+- electrolysis
+- pyrolysis
+- sativa fibers
+- solar concentrator
