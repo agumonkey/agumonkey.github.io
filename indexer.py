@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import glob
 
 template = '''
 <html>
@@ -19,12 +20,18 @@ template = '''
 </html>
 '''
 
+blog = 'blog'
+dest = 'dest'
+match = os.path.sep.join([blog, dest, '*.html'])
 link = '      <li><a href="%s">%s</a></li>'
-candidate = lambda fn: fn.endswith('.html') and not fn == 'index.html'
-entries = '\n'.join(link % (f,f) for f in os.listdir() if candidate(f))
+
+entries = '\n'.join(link % (f,f)
+                    for f in sorted(glob.glob(match))
+                    if not f.endswith('index.html'))
 
 def main():
-    with open('index.html','w') as out:
+    index = os.path.sep.join([blog, dest, 'index.html'])
+    with open(index,'w') as out:
         out.write(template % entries)
 
 if __name__ == '__main__':
