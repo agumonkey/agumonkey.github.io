@@ -23,9 +23,13 @@ template = '''
 blog = 'blog'
 dest = 'dest'
 match = os.path.sep.join([blog, dest, '*.html'])
-link = '      <li><a href="%s">%s</a></li>'
+_link = '      <li><a href="%s">%s</a></li>'
 
-entries = '\n'.join(link % (f,f)
+def link(absolute_path):
+    f = absolute_path.split(os.path.sep)[-1]
+    return _link % (f,f)
+
+entries = '\n'.join(link(f)
                     for f in sorted(glob.glob(match))
                     if not f.endswith('index.html'))
 
