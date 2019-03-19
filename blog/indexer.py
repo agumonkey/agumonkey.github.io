@@ -10,7 +10,7 @@ template = '''
   <body>
     <h1>blog</h1>
     <ul>
-      %s
+%s
     </ul>
     <address>
       <a href="mailto:agumonkey@gmail.com"></a>
@@ -19,9 +19,9 @@ template = '''
 </html>
 '''
 
-link = '<li><a href="%s">%s</a></li>'
-
-entries = '\n'.join(link % (f,f) for f in os.listdir() if f.endswith('.html'))
+link = '      <li><a href="%s">%s</a></li>'
+candidate = lambda fn: fn.endswith('.html') and not fn == 'index.html'
+entries = '\n'.join(link % (f,f) for f in os.listdir() if candidate(f))
 
 def main():
     with open('index.html','w') as out:
